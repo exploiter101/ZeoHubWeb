@@ -306,7 +306,7 @@ body {
 }
 
 .gag-thumbnail .thumbnail-bg {
-    background-image: url('https://imgur.com/a/Ms44DgC');
+    background-image: url('./assets/gag-eggpredictor.svg');
 }
 
 .pet-thumbnail .thumbnail-bg {
