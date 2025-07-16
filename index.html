@@ -3,123 +3,424 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Executor Dashboard</title>
+    <title>ZeoHub - Game Script Executor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="cntr">
-        <!-- Header -->
-        <header class="hdr">
-            <div class="hdr-logo">
-                <i class="fas fa-bolt"></i>
-                CYBER EXECUTORS
+    <div class="dashboard-container">
+        <div class="header">
+            <div class="logo" id="header-logo">
+                <i class="fas fa-terminal"></i>
             </div>
-            <div class="hdr-ctr">
-                <nav class="hdr-nav">
-                    <a href="#"><i class="fas fa-home"></i> Home</a>
-                    <a href="#"><i class="fas fa-star"></i> Top Executors</a>
-                    <a href="#"><i class="fas fa-code"></i> Scripts</a>
-                    <a href="#"><i class="fas fa-question-circle"></i> Support</a>
-                    <a href="#"><i class="fas fa-history"></i> Updates</a>
-                </nav>
+            <h1>ZeoHub</h1>
+            <p>Specialized loadstrings for your favorite Roblox games</p>
+            
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="online-indicator" id="online-indicator"></span>
+                    <span class="online-count-container">
+                        <span class="online-count" id="online-count">1,238</span> Online Now
+                        <span class="user-change" id="user-change">+0</span>
+                    </span>
+                </div>
+                <div class="stat-item">
+                    <span>24.8K Today's Visits</span>
+                </div>
+                <div class="stat-item">
+                    <span>150K Total Executions</span>
+                </div>
             </div>
-            <button class="mob-menu-tgl" id="mobileMenuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </header>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <a href="#"><i class="fas fa-home"></i> Home</a>
-            <a href="#"><i class="fas fa-star"></i> Top Executors</a>
-            <a href="#"><i class="fas fa-code"></i> Scripts</a>
-            <a href="#"><i class="fas fa-question-circle"></i> Support</a>
-            <a href="#"><i class="fas fa-history"></i> Updates</a>
         </div>
-        <div class="menu-overlay" id="menuOverlay"></div>
         
-        <!-- Hero section -->
-        <section class="hero">
-            <h1 class="hero-ttl">ROBLOX EXECUTOR DASHBOARD</h1>
-            <p class="hero-desc">Real-time status monitoring for Roblox script executors with universal loader</p>
-            
-            <div class="counter-container">
-                <div class="counter-item">
-                    <div class="counter-value">24</div>
-                    <div class="counter-label">Executors</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-value">18</div>
-                    <div class="counter-label">Online</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-value">4</div>
-                    <div class="counter-label">Offline</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-value">2</div>
-                    <div class="counter-label">Maintenance</div>
-                </div>
-            </div>
-        </section>
-
-                <!-- Universal copy section -->
-        <div class="hero-crd glass">
-            <h2 class="section-title">
-                <i class="fas fa-globe"></i> Universal Loadstring
-            </h2>
-            <p>Copy this universal loadstring to use with any executor below</p>
-            
-            <div class="loadstring-box glass">
-                <div class="code-container">
-                    <div class="code">
-                        loadstring(game:HttpGet("https://universal-loader.example.com/main.lua"))()
-                    </div>
-                </div>
-                <button class="copy-btn" id="universalCopyBtn">
-                    <i class="fas fa-copy"></i> Copy
+        <div class="tabs-container" id="game-tabs-container">
+            <div class="tabs">
+                <button class="tab active" data-tab="gag">
+                    <i class="fas fa-seedling"></i> Grow A Garden
+                </button>
+                <button class="tab" data-tab="pet">
+                    <i class="fas fa-gem"></i> Pet Simulator
+                </button>
+                <button class="tab" data-tab="adopt">
+                    <i class="fas fa-dog"></i> Adopt Me
+                </button>
+                <button class="tab" data-tab="mm2">
+                    <i class="fas fa-skull"></i> Murder Mystery 2
                 </button>
             </div>
-            
-            <p class="universal-info">
-                <i class="fas fa-info-circle"></i> This universal loadstring works for all executors below
-            </p>
         </div>
         
-        <!-- Filters and search -->
-        <div class="filters-container">
-            <div class="search-box">
-                <i class="fas fa-search"></i>
-                <input type="text" id="searchInput" placeholder="Search executors...">
+        <div class="page active" id="home-page">
+            <div class="content-container" id="loadstring-container">
+                <div class="content active" id="gag-content">
+                    <h2><i class="fas fa-seedling"></i> Grow A Garden</h2>
+                    <div class="code-container" id="gag-code-container">
+                        <div class="code">
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/gagscripts/main.lua"))()
+                        </div>
+                    </div>
+                    <button class="copy-btn">
+                        <i class="fas fa-copy"></i> Copy Loadstring
+                    </button>
+                </div>
+                
+                <div class="content" id="pet-content">
+                    <h2><i class="fas fa-gem"></i> Pet Simulator</h2>
+                    <div class="code-container" id="pet-code-container">
+                        <div class="code">
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/petsimscripts/main.lua"))()
+                        </div>
+                    </div>
+                    <button class="copy-btn">
+                        <i class="fas fa-copy"></i> Copy Loadstring
+                    </button>
+                </div>
+                
+                <div class="content" id="adopt-content">
+                    <h2><i class="fas fa-dog"></i> Adopt Me</h2>
+                    <div class="code-container" id="adopt-code-container">
+                        <div class="code">
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/adoptmescripts/main.lua"))()
+                        </div>
+                    </div>
+                    <button class="copy-btn">
+                        <i class="fas fa-copy"></i> Copy Loadstring
+                    </button>
+                </div>
+                
+                <div class="content" id="mm2-content">
+                    <h2><i class="fas fa-skull"></i> Murder Mystery 2</h2>
+                    <div class="code-container" id="mm2-code-container">
+                        <div class="code">
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/mm2scripts/main.lua"))()
+                        </div>
+                    </div>
+                    <button class="copy-btn">
+                        <i class="fas fa-copy"></i> Copy Loadstring
+                    </button>
+                </div>
             </div>
             
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="online">Online</button>
-                <button class="filter-btn" data-filter="offline">Offline</button>
-                <button class="filter-btn" data-filter="free">Free</button>
-                <button class="filter-btn" data-filter="windows">Windows</button>
+            <div class="executions-feed">
+                <div class="feed-header">
+                    <h2 class="feed-title">
+                        <i class="fas fa-bolt"></i> Recent Executions
+                    </h2>
+                    <div class="execution-counter">
+                        <span id="execution-count">0</span> Today
+                    </div>
+                </div>
+                
+                <div class="executions-list" id="executions-list"></div>
             </div>
         </div>
         
-        
-        <!-- Executor cards grid -->
-        <div class="crds-grid" id="executorGrid">
-            <!-- Executor cards will be generated by JavaScript -->
+        <div class="page" id="scripts-page">
+            <div class="content-container">
+                <h2><i class="fas fa-code"></i> Script Hub Library</h2>
+                <p>Popular script hubs for various Roblox games</p>
+                
+                <div class="hubs-grid">
+                    <div class="hub-card">
+                        <h3><i class="fas fa-bolt"></i> Speedy Hub</h3>
+                        <div class="hub-game-tag gag-tag">Grow A Garden</div>
+                        <div class="code-container hub-code">
+                            <div class="code">
+                                loadstring(game:HttpGet("https://raw.githubusercontent.com/speedyhub/gag.lua"))()
+                            </div>
+                        </div>
+                        <button class="btn">
+                            <i class="fas fa-copy"></i> Copy Loadstring
+                        </button>
+                    </div>
+                    
+                    <div class="hub-card">
+                        <h3><i class="fas fa-shield-alt"></i> No-Lag Hub</h3>
+                        <div class="hub-game-tag pet-tag">Pet Simulator</div>
+                        <div class="code-container hub-code">
+                            <div class="code">
+                                loadstring(game:HttpGet("https://raw.githubusercontent.com/nolaghub/petsim.lua"))()
+                            </div>
+                        </div>
+                        <button class="btn">
+                            <i class="fas fa-copy"></i> Copy Loadstring
+                        </button>
+                    </div>
+                    
+                    <div class="hub-card">
+                        <h3><i class="fas fa-crown"></i> ZeoHub</h3>
+                        <div class="hub-game-tag adopt-tag">Adopt Me</div>
+                        <div class="code-container hub-code">
+                            <div class="code">
+                                loadstring(game:HttpGet("https://raw.githubusercontent.com/zeohub/adoptme.lua"))()
+                            </div>
+                        </div>
+                        <button class="btn">
+                            <i class="fas fa-copy"></i> Copy Loadstring
+                        </button>
+                    </div>
+                    
+                    <div class="hub-card">
+                        <h3><i class="fas fa-globe"></i> NativeHub</h3>
+                        <div class="hub-game-tag mm2-tag">Murder Mystery 2</div>
+                        <div class="code-container hub-code">
+                            <div class="code">
+                                loadstring(game:HttpGet("https://raw.githubusercontent.com/nativehub/mm2.lua"))()
+                            </div>
+                        </div>
+                        <button class="btn">
+                            <i class="fas fa-copy"></i> Copy Loadstring
+                        </button>
+                    </div>
+                    
+                    <div class="hub-card">
+                        <h3><i class="fas fa-robot"></i> AutoExec Hub</h3>
+                        <div class="hub-game-tag">Universal</div>
+                        <div class="code-container hub-code">
+                            <div class="code">
+                                loadstring(game:HttpGet("https://raw.githubusercontent.com/autoexec/universal.lua"))()
+                            </div>
+                        </div>
+                        <button class="btn">
+                            <i class="fas fa-copy"></i> Copy Loadstring
+                        </button>
+                    </div>
+                    
+                    <div class="hub-card">
+                        <h3><i class="fas fa-gem"></i> Diamond Hub</h3>
+                        <div class="hub-game-tag">Universal</div>
+                        <div class="code-container hub-code">
+                            <div class="code">
+                                loadstring(game:HttpGet("https://raw.githubusercontent.com/diamondhub/main.lua"))()
+                            </div>
+                        </div>
+                        <button class="btn">
+                            <i class="fas fa-copy"></i> Copy Loadstring
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
         
-        <footer class="glass">
-            <p>Last updated: July 14, 2025 | Status updates every 5 minutes</p>
-            <p>Data provided by voxlis.NET | This dashboard is for informational purposes only</p>
-        </footer>
+        <div class="page" id="executor-page">
+            <div class="content-container">
+                <h2><i class="fas fa-plug"></i> Executor List</h2>
+                <p>Popular script executors for Roblox</p>
+                
+                <div class="executor-grid">
+                    <div class="executor-card">
+                        <div class="executor-verified">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="executor-header">
+                            <div class="executor-name">
+                                <i class="fas fa-bolt"></i>
+                                Delta
+                            </div>
+                            <div class="executor-status status-online">
+                                Online
+                            </div>
+                        </div>
+                        <div class="executor-desc">
+                            A powerful multi-platform exploit with excellent script support.
+                        </div>
+                        <div class="executor-details">
+                            <div class="detail-label">Level:</div>
+                            <div class="detail-value">8</div>
+                            
+                            <div class="detail-label">Price:</div>
+                            <div class="detail-value">FREE</div>
+                            
+                            <div class="detail-label">Platforms:</div>
+                            <div class="executor-platforms">
+                                <span class="platform-tag">iOS</span>
+                                <span class="platform-tag">Android</span>
+                            </div>
+                        </div>
+                        
+                        <div class="executor-pros">
+                            <ul>
+                                <li>Best script support</li>
+                                <li>100% UNC</li>
+                                <li>Level 8</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="executor-neutral">
+                            <ul>
+                                <li>Has a keysystem</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="executor-card">
+                        <div class="executor-verified">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="executor-header">
+                            <div class="executor-name">
+                                <i class="fas fa-code"></i>
+                                KRNL
+                            </div>
+                            <div class="executor-status status-online">
+                                Online
+                            </div>
+                        </div>
+                        <div class="executor-desc">
+                            A popular free exploit with good performance and decompiler support.
+                        </div>
+                        <div class="executor-details">
+                            <div class="detail-label">Level:</div>
+                            <div class="detail-value">8</div>
+                            
+                            <div class="detail-label">Price:</div>
+                            <div class="detail-value">FREE</div>
+                            
+                            <div class="detail-label">Platforms:</div>
+                            <div class="executor-platforms">
+                                <span class="platform-tag">Android</span>
+                                <span class="platform-tag">iOS</span>
+                            </div>
+                        </div>
+                        
+                        <div class="executor-pros">
+                            <ul>
+                                <li>Has a decompiler</li>
+                                <li>100% UNC</li>
+                                <li>Level 8</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="executor-neutral">
+                            <ul>
+                                <li>Includes a keysystem</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="executor-card">
+                        <div class="executor-header">
+                            <div class="executor-name">
+                                <i class="fas fa-mobile-alt"></i>
+                                ArceusX NEO
+                            </div>
+                            <div class="executor-status status-maintenance">
+                                Maintenance
+                            </div>
+                        </div>
+                        <div class="executor-desc">
+                            A long-standing mobile exploit with VNG support and high compatibility.
+                        </div>
+                        <div class="executor-details">
+                            <div class="detail-label">Level:</div>
+                            <div class="detail-value">8</div>
+                            
+                            <div class="detail-label">Price:</div>
+                            <div class="detail-value">FREE</div>
+                            
+                            <div class="detail-label">Platforms:</div>
+                            <div class="executor-platforms">
+                                <span class="platform-tag">iOS</span>
+                                <span class="platform-tag">Android</span>
+                            </div>
+                        </div>
+                        
+                        <div class="executor-pros">
+                            <ul>
+                                <li>VNG Support</li>
+                                <li>98% UNC~</li>
+                                <li>Level 8</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="executor-neutral">
+                            <ul>
+                                <li>Has a keysystem</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page" id="help-page">
+            <div class="content-container">
+                <h2><i class="fas fa-question-circle"></i> Help & Support</h2>
+                <p>Find answers to common questions and get support</p>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I execute scripts?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Copy the loadstring for your game, paste it into your executor's command window, and press execute. Make sure you have the latest version of the executor installed.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Why is my script not working?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Scripts may stop working after game updates. Check our Discord for updated scripts. Also ensure your executor is up-to-date and you have the necessary dependencies installed.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Is using scripts safe?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>While we implement safety measures, using scripts always carries some risk. We recommend using an alt account, and never share personal information while scripting.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I create my own scripts?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer scripting tutorials on our Discord server. You'll need to learn Lua and understand Roblox's API. Start with simple scripts and gradually work your way up to more complex ones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
-    <div class="notification glass" id="notification">
-        <i class="fas fa-check-circle"></i> Universal loadstring copied to clipboard!
-    </div>
+    <nav class="bottom-nav">
+        <div class="nav-container">
+            <div class="nav-item active" data-page="home-page">
+                <div class="nav-icon"><i class="fas fa-home"></i></div>
+                <div class="nav-text">Home</div>
+            </div>
+            
+            <div class="nav-item" data-page="scripts-page">
+                <div class="nav-icon"><i class="fas fa-code"></i></div>
+                <div class="nav-text">Scripts</div>
+            </div>
+            
+            <div class="nav-logo" id="nav-logo">
+                <i class="fas fa-terminal"></i>
+            </div>
+            
+            <div class="nav-item" data-page="executor-page">
+                <div class="nav-icon"><i class="fas fa-plug"></i></div>
+                <div class="nav-text">Executor</div>
+            </div>
+            
+            <div class="nav-item" data-page="help-page">
+                <div class="nav-icon"><i class="fas fa-question-circle"></i></div>
+                <div class="nav-text">Help</div>
+            </div>
+        </div>
+    </nav>
     
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
