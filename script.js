@@ -66,7 +66,7 @@ function updateOnlineUsers() {
 updateOnlineIndicator();
 
 // Update online users every 15 seconds
-setInterval(updateOnlineUsers, 3000);
+setInterval(updateOnlineUsers, 15000);
 
 // Function to create a fake execution with real time
 function createFakeExecution() {
