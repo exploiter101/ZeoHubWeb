@@ -222,7 +222,7 @@ body {
     padding: 25px;
     background: var(--card-bg);
     border-radius: 12px;
-    margin-bottom: 25px;
+    margin-bottom: 100px;
     border: 1px solid var(--border);
     position: relative;
 }
