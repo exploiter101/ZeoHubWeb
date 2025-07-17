@@ -2,7 +2,9 @@
 const users = [
     "ShadowNinja", "EpicGamer", "ScriptMaster", "CodeWizard", "PixelKing", 
     "ByteLord", "RobloxPro", "LuaExpert", "GameHacker", "VirtualHero",
-    "DarkKnight", "TechSavvy", "ScriptSlinger", "DigitalDragon", "CyberSamurai"
+    "DarkKnight", "TechSavvy", "ScriptSlinger", "DigitalDragon", "CyberSamurai",
+    "titejakol", "voidzbayot", "anythingforme12", "ex0leaker", "bayotbayot",
+    "itsmerealniqqa", "growagarden", "beabadododi", "yawa"
 ];
 
 const games = [
@@ -12,7 +14,6 @@ const games = [
     { id: "mm2", name: "Murder Mystery 2", icon: "fa-skull", color: "mm2" }
 ];
 
-// DOM elements for tabs container
 const tabsContainer = document.getElementById('game-tabs-container');
 
 // Execution counter
