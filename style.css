@@ -302,13 +302,13 @@ body {
 }
 
 .gag-egg-thumbnail .thumbnail-bg {
-    background-image: url('https://tr.rbxcdn.com/180DAY-15980c43aca04b387045cf3d39cb93b6/768/432/Image/Webp/noFilter'); /* 🔁 Replace with your image URL */
+    background-image: url('./assets/gag-eggpredictor.svg');
     background-size: cover;
     background-position: center;
 }
 
 .gag-auto-thumbnail .thumbnail-bg {
-    background-image: url('https://tr.rbxcdn.com/180DAY-15980c43aca04b387045cf3d39cb93b6/768/432/Image/Webp/noFilter'); /* 🔁 Replace with your image URL */
+    background-image: url('./assets/gag-eggpredictor.svg');
     background-size: cover;
     background-position: center;
 }
