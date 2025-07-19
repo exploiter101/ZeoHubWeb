@@ -3,15 +3,12 @@ const users = [
     "ShadowNinja", "EpicGamer", "ScriptMaster", "CodeWizard", "PixelKing", 
     "ByteLord", "RobloxPro", "LuaExpert", "GameHacker", "VirtualHero",
     "DarkKnight", "TechSavvy", "ScriptSlinger", "DigitalDragon", "CyberSamurai",
-    "titejakol", "voidzbayot", "anythingforme12", "ex0leaker", "bayotbayot",
-    "itsmerealniqqa", "growagarden", "beabadododi", "yawa"
+    "GrowMaster", "PlantWizard", "GardenExpert", "AutoFarmer", "BotKing"
 ];
 
 const games = [
-    { id: "gag", name: "Grow A Garden", icon: "fa-seedling", color: "gag" },
-    { id: "pet", name: "Pet Simulator", icon: "fa-gem", color: "pet" },
-    { id: "adopt", name: "Adopt Me", icon: "fa-dog", color: "adopt" },
-    { id: "mm2", name: "Murder Mystery 2", icon: "fa-skull", color: "mm2" }
+    { id: "gag-egg", name: "Egg Predictor", icon: "fa-seedling", color: "gag" },
+    { id: "gag-auto", name: "Auto Farm", icon: "fa-robot", color: "gag" }
 ];
 
 const tabsContainer = document.getElementById('game-tabs-container');
