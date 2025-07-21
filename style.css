@@ -307,7 +307,7 @@ body {
     background-position: center;
 }
 
-.gag-auto-thumbnail .thumbnail-bg {
+.gag-instant-thumbnail .thumbnail-bg {
     background-image: url('./assets/Instantage.svg');
     background-size: cover;
     background-position: center;
