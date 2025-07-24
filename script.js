@@ -39,7 +39,7 @@ function updateOnlineUsers() {
     
     // Calculate new count (don't go below 1200)
     let newCount = onlineCount + (isAdding ? changeAmount : -changeAmount);
-    if (newCount < 1200) newCount = 1200 + Math.floor(Math.random() * 50);
+    if (newCount < 2100) newCount = 2100 + Math.floor(Math.random() * 50);
     
     // Update user change indicator
     userChangeElement.textContent = (isAdding ? '+' : '-') + changeAmount;
