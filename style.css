@@ -246,7 +246,7 @@ body {
     color: white;
 }
 
-/* THUMBNAIL STYLES */
+/* FIXED THUMBNAIL STYLES */
 .thumbnail-container {
     position: relative;
     width: 100%;
@@ -256,6 +256,10 @@ body {
     overflow: hidden;
     border: 1px solid var(--border);
     transition: all 0.3s ease;
+    /* Ensure thumbnails are fully visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .thumbnail {
@@ -276,6 +280,10 @@ body {
     background-size: cover;
     background-position: center;
     transition: transform 0.5s ease;
+    /* Fix for full visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .thumbnail-container:hover .thumbnail-bg {
@@ -301,20 +309,36 @@ body {
     opacity: 30%;
 }
 
+/* FIXED THUMBNAIL BACKGROUNDS */
 .gag-trade-thumbnail .thumbnail-bg {
     background: linear-gradient(135deg, #00ffaa, #00aaff, #aa00ff, #ff0055);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
 }
 
 .gag-egg-thumbnail .thumbnail-bg {
-    background: url('assets/gag-eggpredictor.svg')
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #a18cd1);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
 }
 
 .gag-instant-thumbnail .thumbnail-bg {
-    background: url('assets/Instantage.svg')
+    background: linear-gradient(135deg, #4facfe, #00f2fe, #00f2fe, #4facfe);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
 }
 
 .gag-mutation-thumbnail .thumbnail-bg {
-    background: linear-gradient(135deg, #00ffaa, #00aaff, #aa00ff, #ff0055);
+    background: linear-gradient(135deg, #ff6b6b, #ffd166, #06d6a0, #118ab2);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+/* Animation for gradient backgrounds */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .thumbnail-label {
