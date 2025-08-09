@@ -301,18 +301,21 @@ body {
     opacity: 30%;
 }
 
+.gag-trade-thumbnail .thumbnail-bg {
+    background: linear-gradient(135deg, #0a3a0a, #1a6b1a);
+}
+
 .gag-egg-thumbnail .thumbnail-bg {
-    background-image: url('./assets/gag-eggpredictor.svg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #3a0a0a, #6b1a1a);
 }
 
 .gag-instant-thumbnail .thumbnail-bg {
-    background-image: url('./assets/Instantage.svg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #0a3a3a, #1a6b6b);
 }
 
+.gag-mutation-thumbnail .thumbnail-bg {
+    background: linear-gradient(135deg, #3a0a3a, #6b1a6b);
+}
 
 .thumbnail-label {
     position: absolute;
