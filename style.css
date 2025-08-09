@@ -302,19 +302,19 @@ body {
 }
 
 .gag-trade-thumbnail .thumbnail-bg {
-    background: linear-gradient(135deg, #0a3a0a, #1a6b1a);
+    background: linear-gradient(135deg, #00ffaa, #00aaff, #aa00ff, #ff0055);
 }
 
 .gag-egg-thumbnail .thumbnail-bg {
-    background: linear-gradient(135deg, #3a0a0a, #6b1a1a);
+    background: url('assets/gag-eggpredictor.svg')
 }
 
 .gag-instant-thumbnail .thumbnail-bg {
-    background: linear-gradient(135deg, #0a3a3a, #1a6b6b);
+    background: url('assets/instantage.svg')
 }
 
 .gag-mutation-thumbnail .thumbnail-bg {
-    background: linear-gradient(135deg, #3a0a3a, #6b1a6b);
+    background: linear-gradient(135deg, #00ffaa, #00aaff, #aa00ff, #ff0055);
 }
 
 .thumbnail-label {
