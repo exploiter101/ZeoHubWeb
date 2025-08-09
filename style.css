@@ -317,13 +317,13 @@ body {
 }
 
 .gag-egg-thumbnail .thumbnail-bg {
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #a18cd1);
+    background: url('assets/gag-eggpredictor.svg')
     background-size: 200% 200%;
     animation: gradientAnimation 10s ease infinite;
 }
 
 .gag-instant-thumbnail .thumbnail-bg {
-    background: linear-gradient(135deg, #4facfe, #00f2fe, #00f2fe, #4facfe);
+    background: url('assets/Instantage.svg')
     background-size: 200% 200%;
     animation: gradientAnimation 10s ease infinite;
 }
